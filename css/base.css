@@ -1,0 +1,111 @@
+@charset "utf-8";
+body {
+    background-color: rgb(147, 196, 196);
+}
+.round {
+    z-index: 1;
+    position: relative;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin:auto; 
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background-color: darkmagenta;
+}
+.rod {
+    position: absolute;
+    bottom: 0px;
+    width: 20px;
+    height: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: darkgoldenrod;
+}
+.base {
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+}
+.base-box {
+    position: absolute;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    background-color: rgb(29, 29, 29);
+    bottom: 0;
+}
+@keyframes test {
+        10% {
+            transform: rotate(36deg);
+        }
+        /* 20% {
+            transform: rotate(72deg);
+        }
+        30% {
+            transform: rotate(108deg);
+        }
+        40% {
+            transform: rotate(144deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        60% {
+            transform: rotate(216deg);
+        }
+        70% {
+            transform: rotate(252deg);
+        }
+        80% {
+            transform: rotate(288deg);
+        }
+        90% {
+            transform: rotate(324deg);
+        } */
+        100% {
+            transform: rotate(360deg);
+        }
+}
+
+.rotating {
+    animation: test 3s linear infinite;
+    transform-origin: center center;
+    transition: rotate 3s ease-in;
+    position: absolute;
+    display: inline-flex;
+    flex-wrap: wrap;
+    top: 0;
+    bottom: 0;
+    left: -140%;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.top {
+    border-top:150px solid red;
+    border-left: 150px solid transparent;
+    height: 0;
+    width: 0;
+}
+.bottom {
+    border-left: 150px solid transparent;
+    border-bottom: 150px solid darkorchid;
+    width: 0;
+    height: 0;
+}
+.left {
+    border-top:150px solid rgb(78, 69, 212);
+    border-right: 150px solid transparent;
+    width: 0px;
+    height: 0px;
+}
+.right {
+    border-left: 150px solid rgb(0, 255, 85);
+    border-top: 150px solid transparent;
+    width: 0px;
+    height: 0px;
+}
